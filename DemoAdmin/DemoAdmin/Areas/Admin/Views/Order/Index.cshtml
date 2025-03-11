@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách đơn hàng</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Thêm CSS nếu cần -->
+</head>
+<body>
+    <div class="card mt-2 mb-2 shadow-base">
+        <div class="card-body pb-0">
+            <h2>Tìm kiếm đơn hàng</h2>
+            <form>
+                <input type="text" placeholder="Nhập ID đơn hàng...">
+                <button type="submit">Tìm kiếm</button>
+            </form>
+        </div>
+    </div>
+    <div class="card mt-2 mb-2 shadow-base pd-b-10">
+        <div class="card-body pb-0">
+            <table class="table mg-b-0" cellspacing="0" border="1">
+                <tr>
+                    <th>STT</th>
+                    <th>ID Đơn hàng</th>
+                    <th>Tên khách hàng</th>
+                    <th>Khoá học đăng ký</th>
+                    <th>Giá (đ)</th>
+                    <th>Ngày tạo</th>
+                    <th>Trạng thái</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td><a href="#">DH001</a></td>
+                    <td>Nguyễn Văn A</td>
+                    <td>Khoá học Lập trình Web</td>
+                    <td>1,200,000</td>
+                    <td>01/03/2025</td>
+                    <td>Đã thanh toán</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><a href="#">DH002</a></td>
+                    <td>Trần Thị B</td>
+                    <td>Khoá học Python</td>
+                    <td>900,000</td>
+                    <td>28/02/2025</td>
+                    <td>Chưa thanh toán</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><a href="#">DH003</a></td>
+                    <td>Phạm Văn C</td>
+                    <td>Khoá học Data Science</td>
+                    <td>1,500,000</td>
+                    <td>25/02/2025</td>
+                    <td>Đã thanh toán</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

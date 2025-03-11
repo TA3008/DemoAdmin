@@ -1,0 +1,67 @@
+@{
+    ViewData["Title"] = "Thiết lập Lớp học";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="card mt-2 mb-2 shadow-base">
+    <div class="card-body pb-0">
+        <form method="post" enctype="multipart/form-data" id="editForm">
+            <p>Model ID: 12345</p>
+            <div class="row mb-lg-2">
+                <div class="col-md-4 col-sm-6 search-item">
+                    <label>Tên lớp học <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control form-control-smy" required value="Lớp học A">
+                </div>
+            </div>
+            <div class="row mb-lg-2">
+                <div class="col-md-4 col-sm-6 search-item">
+                    <label>Ảnh lớp học <span class="text-danger">*</span></label>
+                    <img src="/images/sample.jpg" class="img-thumbnail" />
+                </div>
+            </div>
+            <div class="row mb-lg-2">
+                <div class="col-md-4 col-sm-6 search-item">
+                    <label>Khoá học</label>
+                    <select class="form-control">
+                        <option value="1">Khoá học 1</option>
+                        <option value="2" selected>Khoá học 2</option>
+                        <option value="3">Khoá học 3</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row mb-lg-2">
+                <div class="col-md-4 col-sm-6 search-item">
+                    <label>Bài giảng</label>
+                    <select class="form-control">
+                        <option value="1">Bài giảng 1</option>
+                        <option value="2" selected>Bài giảng 2</option>
+                        <option value="3">Bài giảng 3</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row mb-lg-2">
+                <div class="col-md-12 col-sm-12 search-item">
+                    <label>Mô tả <span class="text-danger">*</span></label>
+                    <textarea class="form-control form-control-smy h-100" required>Lớp học về lập trình web.</textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-6 search-item">
+                    <label>Trạng thái</label>&nbsp;
+                    <input type="checkbox" checked>
+                </div>
+            </div>
+            <hr />
+            <div class="mb-2">
+                <button class="btn btn-success" type="button">Lưu</button>
+                <a href="#" class="btn btn-outline-secondary">Quay lại</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section scripts {
+    <script>
+        console.log("TinyMCE initialization script would go here.");
+    </script>
+}
