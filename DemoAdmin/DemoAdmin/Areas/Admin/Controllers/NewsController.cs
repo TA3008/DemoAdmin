@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace DemoAdmin.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class NewController : Controller
+    public class NewsController : Controller
     {
         public IActionResult Index()
         {

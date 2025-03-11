@@ -1,0 +1,87 @@
+@{
+    ViewData["Title"] = "Thống kê đơn hàng, doanh thu";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<style>
+    .img64x64 {
+        width: 64px;
+        height: 64px;
+    }
+</style>
+
+<div class="page-header">
+    <div class="header-sub-title">
+        <nav class="breadcrumb breadcrumb-dash">
+            <a asp-area="Admin" asp-controller="Home" asp-action="Index" class="breadcrumb-item"><i
+                    class="anticon anticon-home m-r-5"></i>Home</a>
+            <span class="breadcrumb-item active">Thống kê đơn hàng, doanh thu : </span>
+        </nav>
+    </div>
+</div>
+<div class="card">
+    <div class="card-body">
+        <div class="row m-b-30">
+            <div class="col-lg-8">
+                <div class="d-md-flex">
+                    <div class="m-b-10 m-r-15">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-hover e-commerce-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Đơn hàng</th>
+                        <th>Ngày mua</th>
+                        <th>Tổng tiền</th>
+                        <th>Trạng thái</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>01</td>
+                        <td>0123456789</td>
+                        <td>24-12-2025</td>
+                        <td>1000.000</td>
+                        <td><span class="badge badge-success">Active</span></td>
+
+                        <td>
+                            <a class="btn btn-primary m-r-5" asp-area="Admin" asp-controller="AdminOrders"
+                                asp-action="Details">View</a>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>02</td>
+                        <td>1236</td>
+                        <td>01-01-1900</td>
+                        <td>101.000</td>
+                        <td><span class="badge badge-success">Active</span></td>
+
+                        <td>
+                            <a class="btn btn-primary m-r-5" asp-area="Admin" asp-controller="AdminOrders"
+                                asp-action="Details">View</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="row m-t-30 lh-1-8">
+                <div class="col-sm-12">
+                    <div class="float-right text-right">
+                        <h3><span class="font-weight-semibold text-dark">Tổng doanh thu :</span></h3>
+                        999.999.999 VNĐ
+                    </div>
+                </div>
+            </div>
+            <div aria-label="Page navigation example">
+                <ul class="pagination">
+                    <pager class="pager-container" list="@Model" asp-area="Admin" asp-controller="AdminOrders"
+                        asp-action="Index" />
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

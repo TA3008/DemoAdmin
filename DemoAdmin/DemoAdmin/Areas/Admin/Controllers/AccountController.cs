@@ -6,6 +6,11 @@ namespace DemoAdmin.Areas.Admin.Controllers
     [Area("Admin")]
     public class AccountController : Controller
     {
+        public ActionResult Users()
+        {
+            return View();
+        }
+
         public ActionResult AddUser()
         {
             return View();
