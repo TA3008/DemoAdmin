@@ -1,8 +1,8 @@
 <div class="page-header">
     <nav class="breadcrumb breadcrumb-dash">
         <a href="#" class="breadcrumb-item"><i class="anticon anticon-home m-r-5"></i>Home</a>
-        <a class="breadcrumb-item" href="#">Danh sách Banner: page 1</a>
-        <span class="breadcrumb-item active">Chỉnh sửa Banner</span>
+        <a class="breadcrumb-item" href="#">Danh sách Hotline: page 1</a>
+        <span class="breadcrumb-item active">Chỉnh sửa Hotline</span>
     </nav>
 </div>
 
@@ -17,23 +17,23 @@
             <div id="header-carousel" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active" style="min-height: 300px;">
-                        <img id="bannerImage" class="w-100" src="images/sample-banner.jpg" style="min-height: 300px; object-fit: cover;">
+                        <img id="hotlineImage" class="w-100" src="images/sample-hotline.jpg" style="min-height: 300px; object-fit: cover;">
                     </div>
                 </div>
             </div>
         </div>
         <div class="card-body">
             <div class="form-group">
-                <label>Tên banner</label>
-                <input type="text" class="form-control" value="Sample Banner">
+                <label>Số Hotline</label>
+                <input type="text" class="form-control" value="0987 654 321">
             </div>
             <div class="form-group">
                 <label>Ảnh đại diện</label>
                 <input type="file" id="fileInput" class="form-control-file" accept="image/*">
             </div>
             <div class="form-group">
-                <label>Thứ tự</label>
-                <input type="text" class="form-control" value="1">
+                <label>Ngày tạo</label>
+                <input type="text" class="form-control" value="2025-03-11">
             </div>
             <div class="row">
                 <div class="col-md-4 col-sm-6 search-item">
@@ -54,7 +54,7 @@
                 if (file) {
                     var reader = new FileReader();
                     reader.onload = function (e) {
-                        $("#bannerImage").attr("src", e.target.result);
+                        $("#hotlineImage").attr("src", e.target.result);
                     };
                     reader.readAsDataURL(file);
                 }
