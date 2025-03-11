@@ -1,58 +1,34 @@
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Danh sách khóa học</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Thêm file CSS nếu có -->
-</head>
-<body>
-    <div class="card mt-2 mb-2 shadow-base pd-b-10">
-        <div class="card-body pb-0">
-            <a href="#" class="btn btn-primary btn-sm pull-right">Thêm mới</a>
-            <table class="table mg-b-0" cellspacing="0">
-                <tr>
-                    <th>STT</th>
-                    <th>Tiêu đề khóa học</th>
-                    <th>Ảnh nội dung</th>
-                    <th>Giá</th>
-                    <th>Giá ảo</th>
-                    <th>Ngày tạo</th>
-                    <th>Trạng thái</th>
-                </tr>
 
-                <!-- Dữ liệu mẫu -->
-                <tr class="stat even">
-                    <td class="ac">1</td>
-                    <td><a href="#">Khóa học lập trình C#</a></td>
-                    <td><img src="images/csharp.jpg" class="img64x64" /></td>
-                    <td>2.000.000 VND</td>
-                    <td>1.500.000 VND</td>
-                    <td>2025-03-10</td>
-                    <td>
-                        <div class="d-flex align-items-center">
-                            <div class="badge badge-success badge-dot m-r-10"></div>
-                            <div>Active</div>
-                        </div>
-                    </td>
-                </tr>
-                <tr class="stat even">
-                    <td class="ac">2</td>
-                    <td><a href="#">Khóa học Python cho người mới</a></td>
-                    <td><img src="images/python.jpg" class="img64x64" /></td>
-                    <td>1.800.000 VND</td>
-                    <td>1.300.000 VND</td>
-                    <td>2025-03-08</td>
-                    <td>
-                        <div class="d-flex align-items-center">
-                            <div class="badge badge-success badge-dot m-r-10"></div>
-                            <div>Inactive</div>
-                        </div>
-                    </td>
-                </tr>
-                <!-- Thêm dữ liệu khác nếu cần -->
-            </table>
-        </div>
+<div class="card mt-2 mb-2 shadow-base pd-b-10">
+    <div class="card-body pb-0">
+        <a href="#" class="btn btn-sm bd bg-success tx-white pointer">Thêm mới</a>
+        <table class="table mg-b-0" cellspacing="0">
+            <tr>
+                <th>STT</th>
+                <th>Tên sản phẩm</th>
+                <th>Ảnh</th>
+                <th>Giá</th>
+                <th>Ngày tạo</th>
+                <th>Trạng thái</th>
+            </tr>
+
+            <!-- Dữ liệu mẫu -->
+            <tr class="stat even">
+                <td class="ac">1</td>
+                <td><a href="#">Sản phẩm 1</a></td>
+                <td><img src="images/csharp.jpg" class="img64x64" /></td>
+                <td>2.000.000 VND</td>
+                <td>2025-03-10</td>
+                <td style="color: green;">Hoạt động</td>
+            </tr>
+            <tr class="stat even">
+                <td class="ac">2</td>
+                <td><a href="#">Sản phẩm 2</a></td>
+                <td><img src="images/python.jpg" class="img64x64" /></td>
+                <td>1.800.000 VND</td>
+                <td>2025-03-08</td>
+                <td style="color: red;">Không hoạt động</td>
+            </tr>
+        </table>
     </div>
-</body>
-</html>
+</div>

@@ -1,0 +1,64 @@
+<div class="page-header">
+    <nav class="breadcrumb breadcrumb-dash">
+        <a href="#" class="breadcrumb-item"><i class="anticon anticon-home m-r-5"></i>Home</a>
+        <a class="breadcrumb-item" href="#">Danh sách Hotline: page 1</a>
+        <span class="breadcrumb-item active">Chỉnh sửa Hotline</span>
+    </nav>
+</div>
+
+<form method="post" enctype="multipart/form-data">
+    <div class="page-header1">
+        <div class="d-md-flex align-items-center justify-content-between">
+            <button class="btn btn-sm bd bg-success tx-white pointer"><i class="anticon anticon-save"></i> <span>Lưu</span></button>
+        </div>
+    </div>
+    <div class="card">
+        <div class="container-fluid p-0 pb-5 mb-5">
+            <div id="header-carousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" style="min-height: 300px;">
+                        <img id="hotlineImage" class="w-100" src="images/sample-hotline.jpg" style="min-height: 300px; object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="form-group">
+                <label>Số Hotline</label>
+                <input type="text" class="form-control" value="0987 654 321">
+            </div>
+            <div class="form-group">
+                <label>Ảnh đại diện</label>
+                <input type="file" id="fileInput" class="form-control-file" accept="image/*">
+            </div>
+            <div class="form-group">
+                <label>Ngày tạo</label>
+                <input type="text" class="form-control" value="2025-03-11">
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-6 search-item">
+                    <label for="Active">Trạng thái</label>
+                    <input type="checkbox" id="Active" checked>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#fileInput").on("change", function (event) {
+                var file = event.target.files[0];
+                if (file) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $("#hotlineImage").attr("src", e.target.result);
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+        });
+    </script>
+}

@@ -58,12 +58,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Codes/DemoAdmin/DemoAdmin/DemoAdmin/Areas/Admin/Views/Lesson/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTGVzc29uXEVkaXQuY3NodG1s
+[D:/Codes/DemoAdmin/DemoAdmin/DemoAdmin/Areas/Admin/Views/Hotline/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG90bGluZVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Codes/DemoAdmin/DemoAdmin/DemoAdmin/Areas/Admin/Views/Lesson/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTGVzc29uXEluZGV4LmNzaHRtbA==
+[D:/Codes/DemoAdmin/DemoAdmin/DemoAdmin/Areas/Admin/Views/Hotline/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG90bGluZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Codes/DemoAdmin/DemoAdmin/DemoAdmin/Areas/Admin/Views/New/Edit.cshtml]

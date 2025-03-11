@@ -1,86 +1,64 @@
-<!DOCTYPE html>
-<html lang="en">
+<div class="page-header">
+    <nav class="breadcrumb breadcrumb-dash">
+        <a href="#" class="breadcrumb-item"><i class="anticon anticon-home m-r-5"></i>Home</a>
+        <a class="breadcrumb-item" href="#">Danh sách Banner: page 1</a>
+        <span class="breadcrumb-item active">Chỉnh sửa Banner</span>
+    </nav>
+</div>
 
-<head>
-    <meta charset="utf-8">
-    <title>Chỉnh sửa Banner - Sample Banner</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <link href="assets/img/favicon.ico" rel="icon">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="assets/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <style>
-        .draggable {
-            cursor: move;
-            position: absolute;
-        }
-    </style>
-</head>
-
-<body>
-    <div class="page-header">
-        <nav class="breadcrumb breadcrumb-dash">
-            <a href="#" class="breadcrumb-item"><i class="anticon anticon-home m-r-5"></i>Home</a>
-            <a class="breadcrumb-item" href="#">Danh sách Banner: page 1</a>
-            <span class="breadcrumb-item active">Chỉnh sửa Banner</span>
-        </nav>
-    </div>
-
-    <form method="post" enctype="multipart/form-data">
-        <div class="page-header1">
-            <div class="d-md-flex align-items-center justify-content-between">
-                <button class="btn btn-primary"><i class="anticon anticon-save"></i> <span>Save</span></button>
-            </div>
+<form method="post" enctype="multipart/form-data">
+    <div class="page-header1">
+        <div class="d-md-flex align-items-center justify-content-between">
+            <button class="btn btn-sm bd bg-success tx-white pointer"><i class="anticon anticon-save"></i> <span>Lưu</span></button>
         </div>
-        <div class="card">
-            <div class="container-fluid p-0 pb-5 mb-5">
-                <div id="header-carousel" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active" style="min-height: 300px;">
-                            <img id="bannerImage" class="w-100" src="images/sample-banner.jpg" style="min-height: 300px; object-fit: cover;">
-                            <div class="carousel-caption">
-                                <div id="bannerHeaderText" class="p-5 draggable" style="top: 10%; left: 20%;">
-                                    <h1 class="display-3 text-white text-uppercase">Sample Header</h1>
-                                </div>
-                                <div id="bannerText" class="p-5 draggable" style="top: 50%; left: 30%;">
-                                    <h5 class="text-white">Sample Banner Text</h5>
-                                </div>
-                                <div id="bannerButton" class="p-5 draggable" style="top: 70%; left: 40%;">
-                                    <a href="#" class="btn btn-primary">Click Here</a>
-                                </div>
-                            </div>
-                        </div>
+    </div>
+    <div class="card">
+        <div class="container-fluid p-0 pb-5 mb-5">
+            <div id="header-carousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" style="min-height: 300px;">
+                        <img id="bannerImage" class="w-100" src="images/sample-banner.jpg" style="min-height: 300px; object-fit: cover;">
                     </div>
                 </div>
             </div>
-            <div class="card-body">
-                <div class="form-group">
-                    <label>Tên banner</label>
-                    <input type="text" class="form-control" value="Sample Banner">
-                </div>
-                <div class="form-group">
-                    <label>Ảnh đại diện</label>
-                    <input type="file" class="form-control-file">
-                </div>
-                <div class="form-group">
-                    <label>Thứ tự</label>
-                    <input type="text" class="form-control" value="1">
-                </div>
-                <div class="form-group">
-                    <label>Banner Header Text</label>
-                    <input type="text" class="form-control" value="Sample Header">
-                </div>
-                <div class="form-group">
-                    <label>Banner Text</label>
-                    <input type="text" class="form-control" value="Sample Banner Text">
-                </div>
-                <div class="form-group">
-                    <label>Button Text</label>
-                    <input type="text" class="form-control" value="Click Here">
+        </div>
+        <div class="card-body">
+            <div class="form-group">
+                <label>Tên banner</label>
+                <input type="text" class="form-control" value="Sample Banner">
+            </div>
+            <div class="form-group">
+                <label>Ảnh đại diện</label>
+                <input type="file" id="fileInput" class="form-control-file" accept="image/*">
+            </div>
+            <div class="form-group">
+                <label>Thứ tự</label>
+                <input type="text" class="form-control" value="1">
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-6 search-item">
+                    <label for="Active">Trạng thái</label>
+                    <input type="checkbox" id="Active" checked>
                 </div>
             </div>
         </div>
-    </form>
-</body>
+    </div>
+</form>
 
-</html>
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#fileInput").on("change", function (event) {
+                var file = event.target.files[0];
+                if (file) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $("#bannerImage").attr("src", e.target.result);
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+        });
+    </script>
+}
