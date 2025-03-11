@@ -29,3 +29,4 @@ D:\Codes\DemoAdmin\DemoAdmin\DemoAdmin\obj\Debug\net8.0\refint\DemoAdmin.dll
 D:\Codes\DemoAdmin\DemoAdmin\DemoAdmin\obj\Debug\net8.0\DemoAdmin.pdb
 D:\Codes\DemoAdmin\DemoAdmin\DemoAdmin\obj\Debug\net8.0\DemoAdmin.genruntimeconfig.cache
 D:\Codes\DemoAdmin\DemoAdmin\DemoAdmin\obj\Debug\net8.0\ref\DemoAdmin.dll
+D:\Codes\DemoAdmin\DemoAdmin\DemoAdmin\obj\Debug\net8.0\DemoAdmin.sourcelink.json
