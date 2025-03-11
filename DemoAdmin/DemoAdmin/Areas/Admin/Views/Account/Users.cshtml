@@ -1,85 +1,84 @@
-﻿<!DOCTYPE html>
-<html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Danh sách tài khoản</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <script>
-        function confirmAction(action) {
-            return confirm('Bạn có chắc chắn muốn ' + action + '?');
-        }
-    </script>
-</head>
-<body>
+﻿@{
+    ViewData["Title"] = "Thống kê tài khoản người dùng";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
 
-    <div class="container mt-4">
-        <h2>Danh sách tài khoản</h2>
-
-        <!-- Tìm kiếm (Để trống vì không có dữ liệu động) -->
-        <div class="card mt-2 mb-2 shadow-base">
-            <div class="card-body pb-0">
-                <p><strong>Chức năng tìm kiếm sẽ được đặt tại đây.</strong></p>
+<div class="page-header">
+    <div class="header-sub-title">
+        <nav class="breadcrumb breadcrumb-dash">
+            <a asp-area="Admin" asp-controller="Home" asp-action="Index" class="breadcrumb-item"><i
+                    class="anticon anticon-home m-r-5"></i>Home</a>
+            <span class="breadcrumb-item active">Danh sách người dùng : </span>
+        </nav>
+    </div>
+</div>
+<div class="card">
+    <div class="card-body">
+        <div class="row m-b-30">
+            <div class="col-lg-8">
+                <div class="d-md-flex">
+                    <div class="m-b-10 m-r-15">
+                    </div>
+                </div>
             </div>
         </div>
-
-        <!-- Bảng danh sách tài khoản -->
-        <div class="card mt-2 mb-2 shadow-base">
-            <div class="card-body pb-0">
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th>STT</th>
-                            <th>Username</th>
-                            <th>Email</th>
-                            <th>Phone</th>
-                            <th>Quyền</th>
-                            <th>Tình trạng</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td><a href="user-details.html">nguyenvana</a></td>
-                            <td>nguyenvana@example.com</td>
-                            <td>0123456789</td>
-                            <td><a href="assign-roles.html">Admin</a></td>
-                            <td>
-                                <a href="#" onclick="return confirmAction('khóa người dùng')" class="text-info">
-                                    <span>Hoạt động</span>
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td><a href="user-details.html">tranthib</a></td>
-                            <td>tranthib@example.com</td>
-                            <td>0987654321</td>
-                            <td><a href="assign-roles.html">Nhân viên</a></td>
-                            <td>
-                                <a href="#" onclick="return confirmAction('mở khóa người dùng')" class="text-danger">
-                                    <span>Đã khóa</span>
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td><a href="user-details.html">phamvanh</a></td>
-                            <td>phamvanh@example.com</td>
-                            <td>0345678912</td>
-                            <td><a href="assign-roles.html">Phân quyền</a></td>
-                            <td>
-                                <a href="#" onclick="return confirmAction('khóa người dùng')" class="text-info">
-                                    <span>Hoạt động</span>
-                                </a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+        <div class="table-responsive">
+            <table class="table table-hover e-commerce-table">
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Quyền</th>
+                        <th>Tình trạng</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td><a href="user-details.html">nguyenvana</a></td>
+                        <td>nguyenvana@example.com</td>
+                        <td>0123456789</td>
+                        <td><a href="/admin/account/AssignRoles">Admin</a></td>
+                        <td>
+                            <a href="#" onclick="return confirmAction('khóa người dùng')" class="text-info">
+                                <span>Hoạt động</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td><a href="user-details.html">tranthib</a></td>
+                        <td>tranthib@example.com</td>
+                        <td>0987654321</td>
+                        <td><a href="/admin/account/AssignRoles">Nhân viên</a></td>
+                        <td>
+                            <a href="#" onclick="return confirmAction('mở khóa người dùng')" class="text-danger">
+                                <span>Đã khóa</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td><a href="user-details.html">phamvanh</a></td>
+                        <td>phamvanh@example.com</td>
+                        <td>0345678912</td>
+                        <td><a href="/admin/account/AssignRoles">Phân quyền</a></td>
+                        <td>
+                            <a href="#" onclick="return confirmAction('khóa người dùng')" class="text-info">
+                                <span>Hoạt động</span>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div aria-label="Page navigation example">
+                <ul class="pagination">
+                    <pager class="pager-container" list="@Model" asp-area="Admin" asp-controller="AdminOrders"
+                        asp-action="Index" />
+                </ul>
             </div>
         </div>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+</div>
