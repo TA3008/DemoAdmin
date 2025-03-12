@@ -1,42 +1,43 @@
-﻿@* @model IEnumerable<Demo.Core.FrameworkModels.UserGroup>
-@using Microsoft.AspNetCore.Http.Extensions
-@{
-ViewBag.Title = "Danh sách tài khoản";
+﻿@{
+    ViewBag.Title = "Danh sách tài khoản";
 }
 
 <div class="card mt-2 mb-2 shadow-base">
-<div class="card-body pb-0">
-<table class="table mg-b-0" cellspacing="0">
-<tr>
-<th>STT</th>
-<th>
-Tên nhóm
-</th>
-<th></th>
-</tr>
+    <div class="card-body pb-0">
+        <table class="table mg-b-0" cellspacing="0">
+            <tr>
+                <th>STT</th>
+                <th>Tên nhóm</th>
+                <th></th>
+            </tr>
 
-@{
-var stt = 1;
-foreach (var item in Model)
-{
-<tr class="stat even">
-<td class="ac">
-@(stt++)
-</td>
-<td>
-<a
-href="@Url.Action("EditGroup", new { item.Id, returnUrl = Context.Request.GetEncodedUrl()})">@item.Name</a>
-</td>
-<td>
-<a
-href="@Url.Action("Employees", new { groupId = item.Id, returnUrl = Context.Request.GetEncodedUrl()})">User
-list</a>
-</td>
-<td>
-</td>
-</tr>
-}
-}
-</table>
+            <tr class="stat even">
+                <td class="ac">1</td>
+                <td>
+                    <a href="#">Admin</a>
+                </td>
+                <td>
+                    <ul style="margin: 0; padding-left: 20px;">
+                        <li>Quản trị</li>
+                    </ul>
+                </td>
+            </tr>
+
+            <tr class="stat even">
+                <td class="ac">2</td>
+                <td>
+                    <a href="#">Sale</a>
+                </td>
+                <td>
+                    <ul style="margin: 0; padding-left: 20px;">
+                        <li>Quản lý Sản phẩm</li>
+                        <li>Quản lý Đơn hàng</li>
+                        <li>Quản lý Banner</li>
+                        <li>Quản lý Hotline</li>
+                        <li>Quản lý Tin tức</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </div>
 </div>
-</div> *@
