@@ -1,6 +1,13 @@
-@section Button {
-    <a href="#" class="btn btn-primary btn-sm pull-right">Thêm mới</a>
-}
+<div class="page-header">
+    <div class="header-sub-title">
+        <nav class="breadcrumb breadcrumb-dash">
+            <a asp-area="Admin" asp-controller="Home" asp-action="Index" class="breadcrumb-item">
+                <i class="anticon anticon-home m-r-5"></i>Home
+            </a>
+            <span class="breadcrumb-item active">Danh sách Hotline : </span>
+        </nav>
+    </div>
+</div>
 <style>
     .img64x64 {
         width: 64px;
@@ -10,6 +17,7 @@
 
 <div class="card mt-2 mb-2 shadow-base pd-b-10">
     <div class="card-body pb-0">
+        <a href="#" class="btn btn-sm bd bg-success tx-white pointer">Thêm mới</a>
         <table class="table mg-b-0" cellspacing="0">
             <thead>
                 <tr>
@@ -23,7 +31,7 @@
             <tbody>
                 <tr class="stat even">
                     <td class="ac">1</td>
-                    <td><a href="tel:0987654321">0987 654 321</a></td>
+                    <td><a href="/admin/hotline/edit">0987 654 321</a></td>
                     <td><img src="https://www.myflfamilies.com/sites/default/files/styles/16_9_ratio_960x540/public/2023-01/hotline_0.jpg?itok=_mLIX2KR"
                             class="img64x64" /></td>
                     <td>2025-03-11</td>
@@ -31,7 +39,7 @@
                 </tr>
                 <tr class="stat even">
                     <td class="ac">2</td>
-                    <td><a href="tel:0912345678">0912 345 678</a></td>
+                    <td><a href="/admin/hotline/edit">0912 345 678</a></td>
                     <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl5QNVmiTnMMyDgWAWsFXsRrwFHg_Opf3Glw&s"
                             class="img64x64" /></td>
                     <td>2025-03-10</td>
@@ -39,7 +47,7 @@
                 </tr>
                 <tr class="stat even">
                     <td class="ac">3</td>
-                    <td><a href="tel:0978123456">0978 123 456</a></td>
+                    <td><a href="/admin/hotline/edit">0978 123 456</a></td>
                     <td><img src="https://miro.medium.com/v2/resize:fit:580/1*j1lLPNDSppLAnLjbzKf7iA.jpeg"
                             class="img64x64" /></td>
                     <td>2025-03-09</td>
