@@ -27,5 +27,11 @@ namespace DemoAdmin.Areas.Admin.Controllers
         {
             return View();
         }
+
+        [HttpGet]
+        public async Task<ActionResult> Groups()
+        {
+            return View();
+        }
     }
 }
